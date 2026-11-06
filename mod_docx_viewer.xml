@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="administrator" method="upgrade">
+    <name>MOD_DOCX_VIEWER</name>
+    <author>Your Name</author>
+    <creationDate>2026-11-06</creationDate>
+    <copyright>(C) 2026</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>admin@example.com</authorEmail>
+    <authorUrl>https://example.com</authorUrl>
+    <version>1.1.0</version>
+    <description>MOD_DOCX_VIEWER_DESCRIPTION</description>
+
+    <namespace path="">Joomla\Module\DocxViewer</namespace>
+
+    <files>
+        <folder module="mod_docx_viewer">services</folder>
+        <folder>Dispatcher</folder>
+        <folder>Helper</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <filename>mod_docx_viewer.xml</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="max_size"
+                    type="number"
+                    default="10"
+                    min="1"
+                    max="100"
+                    step="1"
+                    label="MOD_DOCX_VIEWER_MAX_SIZE"
+                    description="MOD_DOCX_VIEWER_MAX_SIZE_DESC"
+                    filter="uint"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
